@@ -1,0 +1,207 @@
+/*1. CONTAINER E CARD */
+.container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: var(--bg);
+}
+
+.card {
+    width: 100%;
+    max-width: 440px;
+    background: rgba(18, 18, 24, 0.7);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 215, 0, 0.15);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+}
+
+/*2. FORMULÁRIOS*/
+.form-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 8px;
+}
+
+.title span {
+    background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-dim);
+}
+
+.input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrap .ico {
+    position: absolute;
+    left: 14px;
+    width: 18px;
+    height: 18px;
+    color: var(--text-mute);
+    pointer-events: none;
+}
+
+.input-wrap input {
+    width: 100%;
+    padding: 12px 14px 12px 42px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--input-border);
+    border-radius: var(--radius-md);
+    color: var(--text);
+    font-size: 0.92rem;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.25s var(--ease-out);
+}
+
+.input-wrap input::placeholder { color: var(--text-mute); }
+
+.input-wrap input:focus {
+    border-color: var(--gold);
+    background: rgba(255, 215, 0, 0.03);
+    box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.1);
+}
+
+.input-wrap input:focus ~ .ico { color: var(--gold); }
+
+.row-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+}
+
+/*3. CHECKBOX CUSTOMIZADO*/
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: var(--text-dim);
+}
+
+.checkbox input { display: none; }
+
+.checkmark {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--input-border);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.03);
+    position: relative;
+    transition: all 0.2s;
+}
+
+.checkbox input:checked + .checkmark {
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+.checkbox input:checked + .checkmark::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.checkbox.full { margin-top: 4px; }
+
+/*4. LINKS E TEXTOS AUXILIARES */
+.link {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+}
+.link:hover { text-decoration: underline; }
+
+.switch-text {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--text-dim);
+    font-size: 0.88rem;
+}
+
+.switch-link {
+    color: var(--gold);
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+    cursor: pointer;
+}
+.switch-link:hover { text-decoration: underline; }
+
+/*5. BOTÃO PRIMÁRIO DO FORMULÁRIO */
+.form .btn-primary {
+    width: 100%;
+    padding: 13px;
+    font-size: 0.95rem;
+    margin-top: 8px;
+}
+
+.form .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+}
+
+.form .btn-primary .arrow {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s var(--ease-out);
+}
+.form .btn-primary:hover .arrow { transform: translateX(4px); }
+
+/*6. LAYOUT DE INPUTS EM DUAS COLUNAS */
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+/*7. MEDIA QUERIES ESPECÍFICAS DO AUTH */
+@media (max-width: 480px) {
+    .card { padding: 28px 20px; }
+    .title { font-size: 1.4rem; }
+    .input-row { grid-template-columns: 1fr; gap: 18px; }
+}

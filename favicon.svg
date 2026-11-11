@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <!-- Brilho neon amarelo -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Fundo escuro arredondado -->
+  <rect width="64" height="64" rx="14" fill="#0f0f13"/>
+  
+  <!-- Triângulo de Play em amarelo dourado com brilho -->
+  <path d="M24 16 L48 32 L24 48 Z" fill="#FFD700" filter="url(#glow)"/>
+</svg>

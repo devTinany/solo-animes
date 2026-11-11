@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solo Animes - Descubra os melhores animes da temporada.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://devtinany.github.io/solo-animes/">
+    <meta property="og:title" content="Solo Animes - O Melhor do Mundo Anime">
+    <meta property="og:description" content="Assista e explore os melhores animes em alta qualidade. Naruto, One Piece, Solo Leveling e muito mais!">
+    <meta property="og:image" content="https://devtinany.github.io/solo-animes/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://devtinany.github.io/solo-animes/">
+    <meta name="twitter:title" content="Solo Animes - O Melhor do Mundo Anime">
+    <meta name="twitter:description" content="Assista e explore os melhores animes em alta qualidade. Naruto, One Piece, Solo Leveling e muito mais!">
+    <meta name="twitter:image" content="https://devtinany.github.io/solo-animes/og-image.jpg">
+    <title>Solo Animes</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="theme-color" content="#0f0f13">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app">
+        <header class="top-header">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-input">
+
+            <div class="header-container">
+                <a href="home.html" class="logo-link">
+                    <h1 class="logo-text">Solo Animes</h1>
+                </a>
+
+                <nav class="desktop-nav" aria-label="Navegação principal">
+                    <a href="home.html" class="nav-item active" aria-current="page">
+                        <span>Início</span>
+                    </a>
+                    <a href="catalogo.html" class="nav-item">
+                        <span>Catálogo</span>
+                    </a>
+                    <a href="generos.html" class="nav-item">
+                        <span>Gêneros</span>
+                    </a>
+                    <a href="favoritos.html" class="nav-item">
+                        <span>Favoritos</span>
+                    </a>
+                </nav>
+
+                <div class="header-right">
+                    <div class="search-box">
+                        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                        <label for="search-input" class="sr-only">Buscar animes</label>
+                        <input id="search-input" type="search" placeholder="Buscar animes...">
+                    </div>
+
+                    <label for="menu-toggle" class="menu-toggle" aria-label="Abrir menu de navegação">
+                        <span class="hamburger"></span>
+                    </label>
+                </div>
+            </div>
+
+            <nav class="mobile-nav" aria-label="Navegação mobile">
+                <a href="home.html" class="nav-item active" aria-current="page">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <span>Início</span>
+                </a>
+                <a href="catalogo.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                    <span>Catálogo</span>
+                </a>
+                <a href="generos.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                    <span>Gêneros</span>
+                </a>
+                <a href="favoritos.html" class="nav-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span>Favoritos</span>
+                </a>
+                <a href="login.html" class="nav-item logout">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+                    <span>Sair</span>
+                </a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+           
+            <section class="hero-banner" aria-labelledby="hero-title">
+                <video class="hero-video-bg" autoplay muted loop playsinline controls aria-label="Trailer de Attack on Titan">
+                    <source src="videos/eren.mp4" type="video/mp4">
+                    Seu navegador não suporta vídeos HTML5.
+                </video>
+                <div class="hero-overlay"></div>
+                <span class="hero-badge">Em destaque</span>
+                <div class="hero-text">
+                    <h2 id="hero-title">Attack on Titan: Final Season</h2>
+                    <p>A batalha final pela liberdade da humanidade começa agora. Não perca o desfecho épico dessa jornada.</p>
+                </div>
+                <div class="hero-actions">
+                    <button type="button" class="btn-primary">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                        Assistir agora
+                    </button>
+                    <button type="button" class="btn-secondary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        Minha lista
+                    </button>
+                </div>
+            </section>
+
+            
+            <section class="content-section" aria-labelledby="titulo-continuar">
+                <h3 id="titulo-continuar" class="section-title">Continuar assistindo</h3>
+                <div class="anime-row">
+                    <article class="anime-card-progress">
+                        <div class="card-image">
+                            <img src="img/demoluta.jpg" alt="Demon Slayer">
+                            <span class="progress-bar" style="width: 65%;"></span>
+                        </div>
+                        <div class="card-info">
+                            <h4>Demon Slayer</h4>
+                            <p>Episódio 18 de 26</p>
+                        </div>
+                    </article>
+                    <article class="anime-card-progress">
+                        <div class="card-image">
+                            <img src="img/jujuluta.jpg" alt="Jujutsu Kaisen">
+                            <span class="progress-bar" style="width: 40%;"></span>
+                        </div>
+                        <div class="card-info">
+                            <h4>Jujutsu Kaisen</h4>
+                            <p>Episódio 8 de 24</p>
+                        </div>
+                    </article>
+                    <article class="anime-card-progress">
+                        <div class="card-image">
+                            <img src="img/bokuluta.jpg" alt="My Hero Academia">
+                            <span class="progress-bar" style="width: 80%;"></span>
+                        </div>
+                        <div class="card-info">
+                            <h4>My Hero Academia</h4>
+                            <p>Episódio 20 de 25</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- CARROSSEL 3D -->
+            <section class="content-section" aria-labelledby="titulo-recomendados">
+                <h3 id="titulo-recomendados" class="section-title">Recomendados para você</h3>
+                <div class="carousel-3d-wrapper">
+                    <input type="radio" name="carousel" id="c1" checked>
+                    <input type="radio" name="carousel" id="c2">
+                    <input type="radio" name="carousel" id="c3">
+                    <input type="radio" name="carousel" id="c4">
+                    <input type="radio" name="carousel" id="c5">
+
+                    <div class="carousel-3d">
+                        <article class="carousel-card">
+                            <div class="card-3d-content">
+                                <div class="card-image">
+                                    <img src="img/solo.webp" alt="Capa do anime Solo Leveling">
+                                </div>
+                                <div class="card-details">
+                                    <h4>Solo Leveling</h4>
+                                    <span class="rating">⭐ 9.4</span>
+                                    <p>Ação • 24 eps</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="carousel-card">
+                            <div class="card-3d-content">
+                                <div class="card-image">
+                                    <img src="img/one.jpg" alt="Capa do anime One Piece">
+                                </div>
+                                <div class="card-details">
+                                    <h4>One Piece</h4>
+                                    <span class="rating">⭐ 9.2</span>
+                                    <p>Aventura • 1000+ eps</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="carousel-card">
+                            <div class="card-3d-content">
+                                <div class="card-image">
+                                    <img src="img/naruto.jpg" alt="Capa do anime Naruto Shippuden">
+                                </div>
+                                <div class="card-details">
+                                    <h4>Naruto Shippuden</h4>
+                                    <span class="rating">⭐ 8.9</span>
+                                    <p>Ação • 500 eps</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="carousel-card">
+                            <div class="card-3d-content">
+                                <div class="card-image">
+                                    <img src="img/note.jpg" alt="Capa do anime Death Note">
+                                </div>
+                                <div class="card-details">
+                                    <h4>Death Note</h4>
+                                    <span class="rating">⭐ 9.0</span>
+                                    <p>Suspense • 37 eps</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="carousel-card">
+                            <div class="card-3d-content">
+                                <div class="card-image">
+                                    <img src="img/drangoll.jpg" alt="Capa do anime Dragon Ball">
+                                </div>
+                                <div class="card-details">
+                                    <h4>Dragon Ball</h4>
+                                    <span class="rating">⭐ 9.1</span>
+                                    <p>Ação • 153 eps</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="carousel-nav nav-1">
+                        <label for="c5" class="carousel-btn prev" aria-label="Anime anterior">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+                        </label>
+                        <label for="c2" class="carousel-btn next" aria-label="Próximo anime">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                        </label>
+                    </div>
+                    <div class="carousel-nav nav-2">
+                        <label for="c1" class="carousel-btn prev" aria-label="Anime anterior">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+                        </label>
+                        <label for="c3" class="carousel-btn next" aria-label="Próximo anime">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                        </label>
+                    </div>
+                    <div class="carousel-nav nav-3">
+                        <label for="c2" class="carousel-btn prev" aria-label="Anime anterior">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+                        </label>
+                        <label for="c4" class="carousel-btn next" aria-label="Próximo anime">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                        </label>
+                    </div>
+                    <div class="carousel-nav nav-4">
+                        <label for="c3" class="carousel-btn prev" aria-label="Anime anterior">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+                        </label>
+                        <label for="c5" class="carousel-btn next" aria-label="Próximo anime">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                        </label>
+                    </div>
+                    <div class="carousel-nav nav-5">
+                        <label for="c4" class="carousel-btn prev" aria-label="Anime anterior">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+                        </label>
+                        <label for="c1" class="carousel-btn next" aria-label="Próximo anime">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+                        </label>
+                    </div>
+
+                    <div class="carousel-dots" role="tablist" aria-label="Seleção de anime no carrossel">
+                        <label for="c1" class="dot" role="tab" aria-label="Ir para Solo Leveling"></label>
+                        <label for="c2" class="dot" role="tab" aria-label="Ir para One Piece"></label>
+                        <label for="c3" class="dot" role="tab" aria-label="Ir para Naruto Shippuden"></label>
+                        <label for="c4" class="dot" role="tab" aria-label="Ir para Death Note"></label>
+                        <label for="c5" class="dot" role="tab" aria-label="Ir para Dragon Ball"></label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPLORE TODOS -->
+            <section class="content-section" aria-labelledby="titulo-explore">
+                <h3 id="titulo-explore" class="section-title">Explore todos os animes</h3>
+                <div class="anime-grid anime-grid-large">
+                    <article class="anime-card">
+                        <div class="card-image">
+                            <img src="img/narutoex.jpg" alt="Naruto Shippuden">
+                        </div>
+                        <div class="card-info">
+                            <h4>Naruto Shippuden</h4>
+                            <p class="anime-desc">A jornada de um jovem ninja determinado a proteger sua vila e se tornar o Hokage.</p>
+                        </div>
+                    </article>
+                    <article class="anime-card">
+                        <div class="card-image">
+                            <img src="img/oneex.jpg" alt="One Piece">
+                        </div>
+                        <div class="card-info">
+                            <h4>One Piece</h4>
+                            <p class="anime-desc">Um épico de pirataria e aventura seguindo Luffy em sua busca para se tornar o Rei dos Piratas.</p>
+                        </div>
+                    </article>
+                    
+                    <article class="anime-card">
+                        <div class="card-image">
+                            <img src="img/demoex.jpg" alt="Demon Slayer">
+                        </div>
+                        <div class="card-info">
+                            <h4>Demon Slayer</h4>
+                            <p class="anime-desc">Um jovem bondoso se torna caçador de demônios para salvar sua irmã e vingar sua família.</p>
+                        </div>
+                    </article>
+                    <article class="anime-card">
+                        <div class="card-image">
+                            <img src="img/jujuex.jpg" alt="Jujutsu Kaisen">
+                        </div>
+                        <div class="card-info">
+                            <h4>Jujutsu Kaisen</h4>
+                            <p class="anime-desc">Um estudante ingere um dedo amaldiçoado e entra no mundo perigoso dos feiticeiros jujutsu.</p>
+                        </div>
+                    </article>
+                    <article class="anime-card">
+                        <div class="card-image">
+                            <img src="img/erenex.jpg" alt="Attack on Titan">
+                        </div>
+                        <div class="card-info">
+                            <h4>Attack on Titan</h4>
+                            <p class="anime-desc">A humanidade luta pela sobrevivência contra titãs devoradores de homens atrás de muralhas.</p>
+                        </div>
+                    </article>
+                    <article class="anime-card">
+                        <div class="card-image">
+                            <img src="img/soloex.jpg" alt="Solo Leveling">
+                        </div>
+                        <div class="card-info">
+                            <h4>Solo Leveling</h4>
+                            <p class="anime-desc">O caçador mais fraco do mundo ganha um sistema misterioso que lhe permite subir de nível sem limites.</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-container">
+                <div class="footer-brand">
+                    <h2 class="footer-logo">Solo Animes</h2>
+                    <p>Sua plataforma definitiva para descobrir, acompanhar e mergulhar nos melhores animes da temporada. Feito por fãs, para fãs.</p>
+                </div>
+                
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Solo Animes. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
